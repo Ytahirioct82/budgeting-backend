@@ -1,6 +1,22 @@
 {
+  "name": "budget-backend",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "watch": "nodemon server.js",
+    "client": "npm start --prefix ../frontend",
+    "dev": "concurrently \"npm run watch\" \"npm run client\""
+  },
+  "author": "author",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^14.2.0",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "nodemon": "^2.0.13"
   }
 }
