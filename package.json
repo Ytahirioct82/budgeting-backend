@@ -8,6 +8,9 @@
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
+  "engines": {
+    "node": "16.9.0"
+  },
   "author": "author",
   "license": "MIT",
   "devDependencies": {
