@@ -2,6 +2,9 @@ const express = require("express");
 const { request } = require("../app");
 
 const budgetAmountArray = require("../models/transactions");
+const uuidv4 = require("uuid/v4");
+
+uuidv4();
 
 const transactions = express.Router();
 // console.log(budgetAmountArray)
@@ -38,7 +41,7 @@ transactions.delete("/:arrayIndex", (request, response) => {
 transactions.get("/:arrayIndex", (request, response) => {
   const { arrayIndex } = request.params;
   const found = budgetAmountArray.find((element) => element.id === Number(arrayIndex));
-  found ? response.json(found) : response.redirect("/");
+  found ? response.json(found) : response.status(404).json({ error: "site not found" });
 });
 
 module.exports = transactions;
