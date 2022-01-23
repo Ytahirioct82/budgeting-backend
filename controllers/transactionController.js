@@ -2,7 +2,7 @@ const express = require("express");
 const { request } = require("../app");
 const budgetAmountArray = require("../models/transactions");
 const transactions = express.Router();
-// console.log(budgetAmountArray)
+
 transactions.get("/", (request, response) => {
   budgetAmountArray.length
     ? response.status(200).json(budgetAmountArray)
