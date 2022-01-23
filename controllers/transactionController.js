@@ -1,11 +1,6 @@
 const express = require("express");
 const { request } = require("../app");
-
 const budgetAmountArray = require("../models/transactions");
-const uuidv4 = require("uuid/v4");
-
-uuidv4();
-
 const transactions = express.Router();
 // console.log(budgetAmountArray)
 transactions.get("/", (request, response) => {
